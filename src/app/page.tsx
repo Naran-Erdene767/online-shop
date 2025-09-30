@@ -7,7 +7,7 @@ export default function Home() {
     router.push("/shop");
   };
   return (
-    <div className="relative w-full min-h-screen bg-black text-white font-sans bg-no-repeat bg-cover bg-center bg-[url('https://images.unsplash.com/photo-1638184984605-af1f05249a56?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3MjAxN3wwfDF8c2VhcmNofDIwfHxibGFjayUyMGdyYWRpZW50fGVufDB8fHx8MTc1OTE1MjUzOXww&ixlib=rb-4.1.0&q=85&fmt=jpg&crop=entropy&cs=tinysrgb&w=450')]">
+    <div className="relative w-full min-h-screen bg-black text-white font-sans  bg-cover bg-center bg-[url('https://images.unsplash.com/photo-1671159593357-ee577a598f71?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8YmxhY2slMjBncmFkaWVudHxlbnwwfHwwfHx8MA%3D%3D')]">
 
       <div className="px-[344px] max-w-full">
 
@@ -19,10 +19,12 @@ export default function Home() {
             <button className="hover:text-red-500 cursor-pointer">About</button>
             <button className="hover:text-red-500 cursor-pointer">Contact</button>
             <button className="relative cursor-pointer">
-              🛒
-              <span className="absolute -top-2 -right-2 bg-red-500 text-white text-[10px] sm:text-xs w-4 sm:w-5 h-4 sm:h-5 flex items-center justify-center rounded-full">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" className="bi bi-cart" viewBox="0 0 16 16">
+                <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5M3.102 4l1.313 7h8.17l1.313-7zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4m7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4m-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2m7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2" />
+              </svg>
+              <p className="absolute -top-2 -right-4 bg-red-500 text-white text-[10px] sm:text-xs w-4 sm:w-5 h-4 sm:h-5 flex items-center justify-center rounded-full">
                 0
-              </span>
+              </p>
             </button>
           </ul>
         </div>
