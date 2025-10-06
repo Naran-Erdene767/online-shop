@@ -11,7 +11,7 @@ export default function Home() {
       try {
         const res = await fetch("https://dummyjson.com/products/category/beauty");
         const data = await res.json();
-        setProducts(data.products); // ✅ Access the 'products' array
+        setProducts(data.products);
       } catch (error) {
         console.error("Error fetching products:", error);
       }
@@ -26,7 +26,6 @@ export default function Home() {
   return (
     <div className="relative w-full min-h-screen bg-black text-white font-sans bg-no-repeat bg-cover bg-center bg-[url('https://images.unsplash.com/photo-1638184984605-af1f05249a56?crop=entropy&cs=srgb&fm=jpg&q=85&fmt=jpg&crop=entropy&cs=tinysrgb&w=450')]">
       <div className="px-[344px] max-w-full">
-        {/* Navbar */}
         <div className="flex flex-wrap justify-between items-center py-6">
           <div className="text-base sm:text-lg italic">BFSM</div>
           <ul className="flex flex-wrap space-x-4 sm:space-x-8 text-sm sm:text-lg">
@@ -44,8 +43,6 @@ export default function Home() {
         </div>
 
         <h1 className="text-4xl sm:text-5xl font-bold mb-8 text-center">Shop</h1>
-
-        {/* Product Grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-12">
           {products.length > 0 ? (
             products.slice(0, 12).map((product) => (
