@@ -13,9 +13,9 @@ export default function Home() {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const res = await fetch("https://makeup-api.herokuapp.com/api/v1/products.json");
+        const res = await fetch("https://makeup-api.herokuapp.com/api/v1/products.json?brand=maybelline");
         const data = await res.json();
-        setProducts(data.slice(0, 6));
+        setProducts(data.slice(0, 10));
       } catch (err) {
         console.error("Fetch error:", err);
       }
@@ -47,7 +47,7 @@ export default function Home() {
         <h1 className="text-4xl sm:text-5xl font-bold mb-8 text-center">Shop</h1>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-12">
-          {products.map((product, index) => (
+          {products.map((product: any, index) => (
             <div key={index} className="bg-transparent text-white rounded-2xl overflow-hidden shadow-lg">
               <img
                 src={product.image_link}
